@@ -15,10 +15,29 @@ a {
   font-weight: normal;
 }
 
+li+li {
+  margin-bottom: 1em;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   width: 100vw;
   height: 100vh;
+}
+
+form,
+fieldset,
+legend,
+label {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  list-style-type: none;
+}
+
+fieldset ul {
+  list-style-type: none;
 }
 
 header {
@@ -40,7 +59,7 @@ header {
   background-color: silver;
   display: flex;
   justify-content: flex-end;
-  
+
 }
 
 .nav-links {
@@ -75,7 +94,7 @@ header {
 .hero-content {
   width: 75%;
   height: 100%;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,7 +145,7 @@ header {
 }
 
 .image-footer {
-  
+
   width: 100%;
   display: flex;
   justify-content: center;
@@ -134,20 +153,65 @@ header {
 }
 
 .sign-up-mobile {
-  height: 50%;
+  height: 75%;
   width: 75%;
-  padding: 1rem;
   background-color: white;
   border-radius: 10px;
   position: relative;
   display: flex;
+  flex-direction: column;
+}
+
+.sign-up-prompt {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.sign-up-section {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 3;
+  padding: 1rem;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, .5);
+}
+
+.sign-up-submit {
+  display: flex;
+  flex: 1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.colored-section {
+  background-color: #f9fafb;
 }
 
 .sign-up-widescreen {
   display: none;
 }
 
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  
+  flex: 4;
+}
 
+.input-section {
+  
+}
+
+.underline {
+  text-decoration: underline;
+}
 
 @media only screen and (min-width: 750px) {
   .hero {
@@ -172,12 +236,15 @@ header {
   .hero p {
     font-size: 20px;
   }
+
   .hero-content {
     justify-content: space-between;
   }
+
   .sign-up-body {
     flex-direction: row;
   }
+
   .sign-up-image {
     width: 40vw;
     height: 100vh;
@@ -190,5 +257,10 @@ header {
 
   .sign-up-mobile {
     display: none;
+  }
+
+  .image-footer {
+    position: absolute;
+    bottom: 0;
   }
 }
