@@ -12,66 +12,136 @@
 <body class="sign-up-body">
   <div class="sign-up-image">
     <div class="image-banner">
-      <h1>CCD</h1>
+      <h1 class="banner-logo">CCF</h1>
     </div>
-    <div class="sign-up sign-up-mobile">
+    <form class="sign-up sign-up-mobile" name="sign_up" action="" method="GET">
       <div class="colored-section sign-up-prompt">
         <p>
-          Sign up below to create a CCD account. Help to build a better city
+          Sign up below to create a CCF account account. We are counting on you
+          to build a better future for our cities quicker and more efficiently.
         </p>
       </div>
-      <form class="sign-up-form" action="" method="post">
-        <div class="sign-up-section">
-          <h2>Sign Up</h2>
-          <fieldset class="name">
-            <ul>
-              <li class="input-section">
-                <label for="first-name">First Name *</label>
-                <input type="text" name="first_name" id="first-name">
-              </li>
-              <li class="input-section">
-                <label for="last-name">Last Name *</label>
-                <input type="text" name="last_name" id="last-name">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="contact-info">
-            <ul>
-              <li class="input-section">
-                <label for="email">Email Address *</label>
-                <input type="email" name="email" id="email">
-              </li>
-              <li class="input-section">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" name="phone" id="phone">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <ul>
-              <li class="input-section">
-                <label for="password">Password *</label>
-                <input type="password" name="password" id="password">
-              </li>
-              <li class="input-section">
-                <label for="confirm-password">Confirm Password *</label>
-                <input type="password" name="confirm_password" id="confirm-password">
-              </li>
-            </ul>
-          </fieldset>
+      <div class="sign-up-section">
+        <legend>Sign Up</legend>
+        <fieldset class="sign-up-group name">
+          <ul>
+            <li class="input-section">
+              <label for="first-name-mobile">First Name *</label>
+              <input type="text" name="first_name" id="first-name-mobile" class="first-name" required>
+            </li>
+            <li class="input-section">
+              <label for="last-name-mobile">Last Name *</label>
+              <input type="text" name="last_name" id="last-name-mobile" class="last-name" required>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="sign-up-group contact-info">
+          <ul>
+            <li class="input-section">
+              <label for="email-mobile">Email Address *</label>
+              <input type="email" name="email" id="email-mobile" class="email" required>
+            </li>
+            <li class="input-section">
+              <label for="phone-mobile">Phone Number *</label>
+              <input type="text" name="phone" id="phone-mobile" class="phone" required
+                pattern="([1][\+])?[0-9]{3}[-| ][0-9]{3}[-| ][0-9]{4}">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <ul class="sign-up-group password">
+            <li class="input-section">
+              <label for="password-mobile">Password *</label>
+              <input type="password" name="password" id="password-mobile" class="password" required>
+            </li>
+            <li class="input-section">
+              <label for="confirm-password-mobile">Confirm Password *</label>
+              <input type="password" name="confirm_password" id="confirm-password-mobile" class="confirm-password"
+                required>
+              <p class="password-match-prompt"></p>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
+      <div class="colored-section sign-up-submit">
+        <div class="button-side">
+          <button class="sign-up-submit-button" type="submit">Create Account</button>
         </div>
-        <div class="colored-section sign-up-submit">
-          <button type="submit"></button>
+        <div class="account-exists-side">
+          <p>Already have an account? <a href="#" class="account-exist-link"> Log in</a></p>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
+
     <div class="image-footer">
       <p>Photo by <span class="underline">Philipp Silbernagl</span> from Pexels</p>
     </div>
   </div>
-  <div class="sign-up sign-up-widescreen">
 
-  </div>
+
+  <form class="sign-up sign-up-widescreen" name="sign_up" action="" method="GET">
+    <div class="colored-section sign-up-prompt">
+      <p>
+        Sign up below to create a CCF account, or log in to an existing CCF account. We are counting on you
+        to build a better future for our cities quicker and more efficiently.
+      </p>
+    </div>
+
+    <div class="sign-up-section">
+      <legend>Sign Up</legend>
+      <fieldset class="sign-up-group name">
+        <ul class="input-list">
+          <li class="input-section">
+            <label for="first-name-widescreen">First Name *</label>
+            <input type="text" name="first_name" id="first-name-widescreen" class="first-name" required>
+          </li>
+          <li class="input-section">
+            <label for="last-name-mobile">Last Name *</label>
+            <input type="text" name="last_name" id="last-name-mobile" class="last-name" required>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="sign-up-group contact-info">
+        <ul class="input-list">
+          <li class="input-section">
+            <label for="email-widescreen">Email Address *</label>
+            <input type="email" name="email" id="email-widescreen" class="email" required>
+          </li>
+          <li class="input-section">
+            <label for="phone-widescreen">Phone Number *</label>
+            <input type="text" name="phone" id="phone-widescreen" class="phone" required
+              pattern="([1][\+])?[0-9]{3}[-| ][0-9]{3}[-| ][0-9]{4}">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="sign-up-group passwords">
+        <ul class="input-list">
+          <li class="input-section">
+            <label for="password-widescreen">Password *</label>
+            <input type="password" name="password" id="password-widescreen" class="password" required>
+            <p class="password-match-prompt"></p>
+          </li>
+          <li class="input-section">
+            <label for="confirm-password-widescreen">Confirm Password *</label>
+            <input type="password" name="confirm_password" id="confirm-password-widescreen" class="confirm-password"
+              required>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+
+    <div class="colored-section sign-up-submit">
+      <div class="submit-section-left">
+
+        <button class="sign-up-submit-button" type="submit">Create Account</button>
+        <p>Already have an account? <a href="#" class="account-exist-link"> Log in</a></p>
+
+      </div>
+    </div>
+
+  </form>
+
+  <script src="./sign_up_script.js"></script>
 </body>
 
 </html>

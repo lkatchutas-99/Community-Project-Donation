@@ -16,7 +16,7 @@ a {
 }
 
 li+li {
-  margin-bottom: 1em;
+  margin-bottom: 3%;
 }
 
 body {
@@ -45,6 +45,43 @@ header {
   position: relative;
 }
 
+input {
+  border: solid 1px #e5e7eb;
+  border-radius: 4px;
+  padding: 3px 5px;
+}
+
+input:focus {
+  outline-style: solid;
+  outline-color: blue;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, .2);
+}
+
+input:invalid,
+input:invalid:focus {
+  outline-color: red;
+  outline-style: solid;
+}
+
+input:invalid {
+  outline-width: 1px;
+}
+
+input:invalid:focus {
+  outline-width: 2px;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: 1000;
+  margin-bottom: 1rem;
+}
+
+@font-face {
+  font-family: 'bungee-spice';
+  src: url(./BungeeSpice-Regular.ttf);
+}
+
 .index-body {
   display: flex;
   flex-direction: column;
@@ -59,7 +96,6 @@ header {
   background-color: silver;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .nav-links {
@@ -72,7 +108,7 @@ header {
 }
 
 .link {
-  padding: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .hero-section {
@@ -124,12 +160,16 @@ header {
   flex-direction: column;
 }
 
+.sign-up-group {
+  margin-bottom: 5%;
+}
+
 .sign-up-image {
   background-image: url('./pexels-philipp-silbernagl-962889.jpg');
   background-size: cover;
   background-position: center center;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -140,26 +180,35 @@ header {
 .image-banner {
   background-color: rgba(0, 0, 0, .5);
   width: 100%;
-  height: 15%;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.banner-logo {
+  font-family: 'bungee-spice';
+  font-size: 8vw;
 }
 
 .image-footer {
-
   width: 100%;
   display: flex;
   justify-content: center;
   color: white;
+  margin: 1%;
 }
 
 .sign-up-mobile {
-  height: 75%;
+  height: 100%;
   width: 75%;
   background-color: white;
   border-radius: 10px;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sign-up-prompt {
@@ -169,25 +218,37 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  flex: 1;
+}
+
+.sign-up-prompt>p {
+  font-weight: 800;
+  font-size: 0.7rem;
 }
 
 .sign-up-section {
   z-index: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex: 3;
   padding: 1rem;
-  box-shadow: 0 4px 9px rgba(0, 0, 0, .5);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, .2);
 }
+
 
 .sign-up-submit {
   display: flex;
-  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  padding: 1rem;
+}
+
+
+.sign-up-submit button {
+  margin-bottom: 3%;
 }
 
 .colored-section {
@@ -198,27 +259,72 @@ header {
   display: none;
 }
 
-.sign-up-form {
-  display: flex;
-  flex-direction: column;
-  
-  flex: 4;
-}
 
 .input-section {
-  
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3%;
+}
+
+.input-section input {
+  width: 100%;
 }
 
 .underline {
   text-decoration: underline;
 }
 
-@media only screen and (min-width: 750px) {
+.sign-up-submit-button {
+  z-index: 0;
+  height: 100%;
+  background-color: #596D48;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.button-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+}
+
+.account-exists-side {
+  display: flex;
+
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.account-exist-link {
+  color: #596D48
+}
+
+.password-match-prompt {
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+@media only screen and (min-width: 550px) {
+  label {
+    font-size: 13px;
+  }
+
   .hero {
     width: 75%;
     height: 75%;
     padding: 1rem;
   }
+
 
   .nav {
     position: relative;
@@ -246,7 +352,7 @@ header {
   }
 
   .sign-up-image {
-    width: 40vw;
+    width: 50vw;
     height: 100vh;
   }
 
@@ -257,6 +363,72 @@ header {
 
   .sign-up-mobile {
     display: none;
+
+  }
+
+  .sign-up-widescreen {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .colored-section {
+    display: flex;
+    flex: 1
+  }
+
+  .sign-up-form {
+    height: 100vh;
+  }
+
+  .sign-up-prompt {
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+  }
+
+  .sign-up-section {
+    display: flex;
+
+    padding-left: 3rem;
+  }
+
+  .input-section {
+    margin: 0;
+    padding: 0;
+    width: 45%;
+    margin-right: 10%;
+  }
+
+  .input-list {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .sign-up-submit {
+    padding: 2rem 3rem;
+    display: flex;
+    
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .sign-up-prompt p {
+    width: 75%;
+  }
+
+  .sign-up-submit-button {
+    border-radius: 5px;
+    width: 100%;
+    height: 25%;
+    
+  }
+
+  .submit-section-left {
+    height: 100%;
   }
 
   .image-footer {
