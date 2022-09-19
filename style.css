@@ -77,6 +77,10 @@ legend {
   margin-bottom: 1rem;
 }
 
+label {
+  font-weight: 1000;
+}
+
 @font-face {
   font-family: 'bungee-spice';
   src: url(./BungeeSpice-Regular.ttf);
@@ -386,7 +390,10 @@ legend {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+  }
 
+  .sign-up-prompt p {
+    font-size: 20px;
   }
 
   .sign-up-section {
