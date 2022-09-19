@@ -1,10 +1,4 @@
 window.onload = () => {
-  let inputs = Array.from(document.querySelectorAll('input'));
-  let sign_up_forms = Array.from(document.querySelectorAll('.sign-up'));
-  let first_name = Array.from(document.querySelectorAll('.first-name'))
-  let last_name = Array.from(document.querySelectorAll('.last-name'))
-  let email = Array.from(document.querySelectorAll('.email'))
-  let phone = Array.from(document.querySelectorAll('.phone'))
   let password_mobile = document.querySelector('#password-mobile');
   let confirm_password_mobile = document.querySelector('#confirm-password-mobile');
   let password_widescreen = document.querySelector('#password-widescreen')
@@ -13,7 +7,7 @@ window.onload = () => {
 
   errorMsg();
   
-  
+
   password_mobile.addEventListener('input', updatePasswordDetails)
   password_widescreen.addEventListener('input', updatePasswordDetails)
   confirm_password_mobile.addEventListener('input', updateConfirmPasswordDetails);
