@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Sign Up</title>
+  <title>CCF Sign Up</title>
 </head>
 
 <body class="sign-up-body">
@@ -90,45 +90,47 @@
 
     <div class="sign-up-section">
       <legend>Sign Up</legend>
-      <fieldset class="sign-up-group name">
-        <ul class="input-list">
-          <li class="input-section">
-            <label for="first-name-widescreen">First Name *</label>
-            <input type="text" name="first_name" id="first-name-widescreen" class="first-name" required>
-          </li>
-          <li class="input-section">
-            <label for="last-name-mobile">Last Name *</label>
-            <input type="text" name="last_name" id="last-name-mobile" class="last-name" required>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="sign-up-group contact-info">
-        <ul class="input-list">
-          <li class="input-section">
-            <label for="email-widescreen">Email Address *</label>
-            <input type="email" name="email" id="email-widescreen" class="email" required>
-          </li>
-          <li class="input-section">
-            <label for="phone-widescreen">Phone Number *</label>
-            <input type="text" name="phone" id="phone-widescreen" class="phone" required
-              pattern="([1][\+])?[0-9]{3}[-| ][0-9]{3}[-| ][0-9]{4}">
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="sign-up-group passwords">
-        <ul class="input-list">
-          <li class="input-section">
-            <label for="password-widescreen">Password *</label>
-            <input type="password" name="password" id="password-widescreen" class="password" required>
-            <p class="password-match-prompt"></p>
-          </li>
-          <li class="input-section">
-            <label for="confirm-password-widescreen">Confirm Password *</label>
-            <input type="password" name="confirm_password" id="confirm-password-widescreen" class="confirm-password"
-              required>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="sign-up-content">
+        <fieldset class="sign-up-group name">
+          <ul class="input-list">
+            <li class="input-section">
+              <label for="first-name-widescreen">First Name *</label>
+              <input type="text" name="first_name" id="first-name-widescreen" class="first-name" required>
+            </li>
+            <li class="input-section">
+              <label for="last-name-mobile">Last Name *</label>
+              <input type="text" name="last_name" id="last-name-mobile" class="last-name" required>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="sign-up-group contact-info">
+          <ul class="input-list">
+            <li class="input-section">
+              <label for="email-widescreen">Email Address *</label>
+              <input type="email" name="email" id="email-widescreen" class="email" required>
+            </li>
+            <li class="input-section">
+              <label for="phone-widescreen">Phone Number *</label>
+              <input type="text" name="phone" id="phone-widescreen" class="phone" required
+                pattern="([1][\+])?[0-9]{3}[-| ][0-9]{3}[-| ][0-9]{4}">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="sign-up-group passwords">
+          <ul class="input-list">
+            <li class="input-section">
+              <label for="password-widescreen">Password *</label>
+              <input type="password" name="password" id="password-widescreen" class="password" required>
+              <output for="password-widescreen" class="password-match-prompt"></output>
+            </li>
+            <li class="input-section">
+              <label for="confirm-password-widescreen">Confirm Password *</label>
+              <input type="password" name="confirm_password" id="confirm-password-widescreen" class="confirm-password"
+                required>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
     </div>
 
     <div class="colored-section sign-up-submit">
