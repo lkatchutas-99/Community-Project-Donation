@@ -4,6 +4,7 @@ window.onload = () => {
   let password_widescreen = document.querySelector('#password-widescreen')
   let confirm_password_widescreen = document.querySelector('#confirm-password-widescreen')
   let password_match_prompt = Array.from(document.querySelectorAll('.password-match-prompt'));
+  let sign_up_forms = Array.from(document.querySelectorAll('.sign-up-forms'))
 
   errorMsg();
   
