@@ -1,9 +1,15 @@
+@font-face {
+  font-family: 'bungee-spice';
+  src: url(./BungeeSpice-Regular.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
 }
+
 
 html {
   overflow-y: scroll;
@@ -16,7 +22,7 @@ a {
 }
 
 li+li {
-  margin-bottom: 3%;
+  margin-bottom: 2%;
 }
 
 body {
@@ -36,9 +42,6 @@ label {
   list-style-type: none;
 }
 
-fieldset ul {
-  list-style-type: none;
-}
 
 header {
   width: 100vw;
@@ -79,11 +82,6 @@ legend {
 
 label {
   font-weight: 1000;
-}
-
-@font-face {
-  font-family: 'bungee-spice';
-  src: url(./BungeeSpice-Regular.ttf);
 }
 
 .index-body {
@@ -164,9 +162,7 @@ label {
   flex-direction: column;
 }
 
-.sign-up-group {
-  margin-bottom: 5%;
-}
+
 
 .sign-up-image {
   background-image: url('./pexels-philipp-silbernagl-962889.jpg');
@@ -309,6 +305,10 @@ label {
   align-items: flex-start;
 }
 
+.input-list {
+  list-style-type: none;
+}
+
 .account-exist-link {
   color: #596D48
 }
@@ -323,12 +323,23 @@ label {
     font-size: 13px;
   }
 
+  legend {
+    font-size: 20px;
+  }
+
+  fieldset {
+    margin-bottom: 1rem;
+  }
+  
+  .input-section input {
+    width: 70%;
+    height: 80%;
+  }
   .hero {
     width: 75%;
     height: 75%;
     padding: 1rem;
   }
-
 
   .nav {
     position: relative;
@@ -365,20 +376,18 @@ label {
     top: 20%;
   }
 
-  .sign-up-mobile {
-    display: none;
-
-  }
+  .sign-up-mobile { display: none; }
 
   .sign-up-widescreen {
     width: 80%;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   .colored-section {
     display: flex;
-    flex: 1
+    height: 100%; 
   }
 
   .sign-up-form {
@@ -392,45 +401,57 @@ label {
     align-items: flex-end;
   }
 
-  .sign-up-prompt p {
-    font-size: 20px;
-  }
-
   .sign-up-section {
     display: flex;
-
+    height: 100%;
     padding-left: 3rem;
+    padding-top: 1rem;
+  }
+
+  .sign-up-content {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .input-section {
     margin: 0;
     padding: 0;
-    width: 45%;
-    margin-right: 10%;
+    width: 100%;
+    
   }
 
   .input-list {
     display: flex;
     width: 100%;
     justify-content: flex-start;
+    
+  }
+
+  #confirm-password-widescreen {
+    height: 27px;
   }
 
   .sign-up-submit {
     padding: 2rem 3rem;
     display: flex;
     
+    height: 100%;
     justify-content: flex-start;
     align-items: flex-start;
   }
 
   .sign-up-prompt p {
     width: 75%;
+    font-size: 100%;
   }
 
   .sign-up-submit-button {
     border-radius: 5px;
     width: 100%;
-    height: 25%;
+    height: 30%;
     
   }
 
