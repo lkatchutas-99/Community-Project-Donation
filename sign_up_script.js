@@ -1,14 +1,25 @@
 window.onload = () => {
+  let first_name = Array.from(document.querySelectorAll('.first-name'));
+  let last_name = Array.from(document.querySelectorAll('.last-name'))
+  let email = Array.from(document.querySelectorAll('.email'));
+  let phone = Array.from(document.querySelectorAll('.phone'));
   let password_mobile = document.querySelector('#password-mobile');
   let confirm_password_mobile = document.querySelector('#confirm-password-mobile');
   let password_widescreen = document.querySelector('#password-widescreen')
   let confirm_password_widescreen = document.querySelector('#confirm-password-widescreen')
   let password_match_prompt = Array.from(document.querySelectorAll('.password-match-prompt'));
-  let sign_up_forms = Array.from(document.querySelectorAll('.sign-up-forms'))
+  let sign_up_forms = Array.from(document.querySelectorAll('.sign-up'))
+
+  first_name[0].value = "test"
 
   errorMsg();
-  
-
+  console.log(first_name)
+  for (let i = 0; i < 2; i++) {
+    first_name[i].addEventListener('input', e => { distributeFormData(e.target, first_name) });
+    last_name[i].addEventListener('input', e => distributeFormData(e.target, last_name));
+    email[i].addEventListener('input', e => distributeFormData(e.target, email));
+    phone[i].addEventListener('input', e => distributeFormData(e.target, phone));
+  }
   password_mobile.addEventListener('input', updatePasswordDetails)
   password_widescreen.addEventListener('input', updatePasswordDetails)
   confirm_password_mobile.addEventListener('input', updateConfirmPasswordDetails);
@@ -18,13 +29,20 @@ window.onload = () => {
     form.addEventListener('submit', e => {
       if (password_mobile.value !== confirm_password_mobile.value) {
         alert('Passwords do not match')
-        e.preventDefault()
+        e.preventDefault();
       }
       else {
         alert('Registration was successful, welcome to CCF')
         form.submit();
       }
     })
+  }
+
+  function distributeFormData(current_form, forms) {
+    for (let form of forms) {
+      form.value = current_form.value;
+
+    }
   }
 
   function passwordErrorColor() {
