@@ -21,12 +21,8 @@ a {
   font-weight: normal;
 }
 
-li+li {
-  margin-bottom: 2%;
-}
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   width: 100vw;
   height: 100vh;
 }
@@ -94,43 +90,41 @@ label {
   position: relative;
   top: 0;
   width: 100vw;
-  height: 2em;
+  height: 3rem;
   background-color: silver;
   display: flex;
-  justify-content: flex-end;
-}
-
-.nav-links {
-  max-width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  padding-right: 1rem;
 }
 
-.link {
-  padding-bottom: 0.5rem;
+.logo {
+  font-family: 'bungee-spice';
 }
 
 .hero-section {
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   border-bottom: solid 1px;
   justify-content: center;
   align-items: center;
+  background-image: url('./pexels-sevenstorm-juhaszimrus-439416.jpg');
+  background-position: center center;
+  background-size: cover;
 }
 
 .hero {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   display: flex;
   justify-content: center;
+  background-color: #e5e7eb;
+  border-radius: 30px;
+  opacity: 0.9;
 }
 
 .hero-content {
-  width: 75%;
+  width: 77%;
   height: 100%;
 
   display: flex;
@@ -139,30 +133,41 @@ label {
   justify-content: space-evenly;
 }
 
+.hero-list h4 {
+  margin-bottom: 1rem;
+}
+
+.hero-list {
+  width: 88%;
+}
+
 .hero-content h3 {
   text-align: center;
 }
 
-.hero-content p {
-  text-align: justify;
+.hero-button-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25%;
 }
 
-
-.sign-up-button {
-  padding: 1rem 1rem;
+.hero-sign-up-button {
   background-color: #e9e9ed;
   border: 2px solid #bcbcc5;
   border-radius: 10px;
-  width: 40%;
+  width: 60%;
+  height: 50%;
   color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sign-up-body {
   display: flex;
   flex-direction: column;
 }
-
-
 
 .sign-up-image {
   background-image: url('./pexels-philipp-silbernagl-962889.jpg');
@@ -187,7 +192,6 @@ label {
 }
 
 .banner-logo {
-  font-family: 'bungee-spice';
   font-size: 8vw;
 }
 
@@ -259,7 +263,6 @@ label {
   display: none;
 }
 
-
 .input-section {
   display: flex;
   flex-direction: column;
@@ -330,24 +333,53 @@ label {
   fieldset {
     margin-bottom: 1rem;
   }
-  
+
+  a:default {
+    color: black;
+  }
+
+  a:hover,
+  a:visited:hover {
+    color: red;
+    border-color: red;
+    opacity: 1;
+  }
+
+  .hero-sign-up-button {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+  }
+
   .input-section input {
     width: 70%;
     height: 80%;
   }
+
   .hero {
     width: 75%;
     height: 75%;
     padding: 1rem;
   }
 
+  .homepage-logo {
+    font-size: 60px;
+  }
+
   .nav {
     position: relative;
+    height: 4rem;
   }
 
   .hero-section {
-    height: 95vh;
+    height: 100vh;
     width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-list>* {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   .hero-header {
@@ -360,6 +392,10 @@ label {
 
   .hero-content {
     justify-content: space-between;
+  }
+
+  .hero-button-section {
+    justify-content: space-evenly;
   }
 
   .sign-up-body {
@@ -376,7 +412,9 @@ label {
     top: 20%;
   }
 
-  .sign-up-mobile { display: none; }
+  .sign-up-mobile {
+    display: none;
+  }
 
   .sign-up-widescreen {
     width: 80%;
@@ -387,7 +425,7 @@ label {
 
   .colored-section {
     display: flex;
-    height: 100%; 
+    height: 100%;
   }
 
   .sign-up-form {
@@ -420,14 +458,14 @@ label {
     margin: 0;
     padding: 0;
     width: 100%;
-    
+
   }
 
   .input-list {
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    
+
   }
 
   #confirm-password-widescreen {
@@ -437,7 +475,7 @@ label {
   .sign-up-submit {
     padding: 2rem 3rem;
     display: flex;
-    
+
     height: 100%;
     justify-content: flex-start;
     align-items: flex-start;
@@ -452,7 +490,7 @@ label {
     border-radius: 5px;
     width: 100%;
     height: 30%;
-    
+    font-weight: 1000;
   }
 
   .submit-section-left {
@@ -463,4 +501,5 @@ label {
     position: absolute;
     bottom: 0;
   }
+
 }
