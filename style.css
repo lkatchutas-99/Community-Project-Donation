@@ -38,7 +38,6 @@ label {
   list-style-type: none;
 }
 
-
 header {
   width: 100vw;
   position: relative;
@@ -121,7 +120,7 @@ label {
   width: 100vw;
   display: flex;
   justify-content: center;
-  
+
   background-color: #e9e9ed;
 }
 
@@ -301,7 +300,6 @@ label {
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 .button-side {
@@ -483,7 +481,6 @@ label {
     display: flex;
     width: 100%;
     justify-content: flex-start;
-
   }
 
   #confirm-password-widescreen {
