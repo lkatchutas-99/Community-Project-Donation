@@ -3,36 +3,31 @@ window.onload = () => {
   let last_name = Array.from(document.querySelectorAll('.last-name'))
   let email = Array.from(document.querySelectorAll('.email'));
   let phone = Array.from(document.querySelectorAll('.phone'));
-  let password_mobile = document.querySelector('#password-mobile');
-  let confirm_password_mobile = document.querySelector('#confirm-password-mobile');
-  let password_widescreen = document.querySelector('#password-widescreen');
-  let confirm_password_widescreen = document.querySelector('#confirm-password-widescreen');
+  let password = Array.from(document.querySelectorAll('.password'));
+  let confirm_password = Array.from(document.querySelectorAll('.confirm-password'));
   let password_match_prompt = Array.from(document.querySelectorAll('.password-match-prompt'));
-  let sign_up_forms = Array.from(document.querySelectorAll('.sign-up'))
   let prompts = Array.from(document.querySelectorAll('.prompt'));
+  let sign_up_forms = Array.from(document.querySelectorAll('.sign-up'))
 
   const prompt_message = 'Sign up below to create a CCF account, or log in to an existing CCF account. We are counting on you to build a better future for our cities.'
+  const allInputs = [first_name, last_name, email, phone, password, confirm_password]
+
+  errorMsg();
 
   for (let prompt of prompts) {
     prompt.textContent = prompt_message
   }
 
-  errorMsg();
-  console.log(first_name)
-  for (let i = 0; i < 2; i++) {
-    first_name[i].addEventListener('input', e => { distributeFormData(e.target, first_name) });
-    last_name[i].addEventListener('input', e => distributeFormData(e.target, last_name));
-    email[i].addEventListener('input', e => distributeFormData(e.target, email));
-    phone[i].addEventListener('input', e => distributeFormData(e.target, phone));
+  console.log(sign_up_forms)
+  for (let input of allInputs) {
+    for (let inputDevice of input) {
+      inputDevice.addEventListener('input', e => { distributeFormData(e.target, input) });
+    }
   }
-  password_mobile.addEventListener('input', e => distributePasswords(e, password_mobile, password_widescreen));
-  password_widescreen.addEventListener('input', e => distributePasswords(e, password_mobile, password_widescreen));
-  confirm_password_mobile.addEventListener('input', e => distributePasswords(e, confirm_password_mobile, confirm_password_widescreen));
-  confirm_password_widescreen.addEventListener('input', e => distributePasswords(e, confirm_password_mobile, confirm_password_widescreen));
 
   for (let form of sign_up_forms) {
     form.addEventListener('submit', e => {
-      if (password_mobile.value !== confirm_password_mobile.value) {
+      if (password[0].value !== confirm_password[0].value) {
         alert('Passwords do not match');
         e.preventDefault();
       }
@@ -47,14 +42,15 @@ window.onload = () => {
     for (let form of forms) {
       form.value = current_form.value;
     }
+    errorMsg();
   }
 
   function passwordErrorColor() {
-    for (let prompt of password_match_prompt) {
-      prompt.style.color = 'red';
+    for (let i = 0; i < 2; i++) {
+      password_match_prompt[i].style.color = 'red';
+      password[i].style.cssText = "outline-color: red;outline-style: solid;outline-width: 1px;";
+      confirm_password[i].style.cssText = "outline-color: red;outline-style: solid;outline-width: 1px;";
     }
-    password_mobile.style.cssText = "outline-color: red;outline-style: solid;outline-width: 1px;";
-    confirm_password_mobile.style.cssText = "outline-color: red;outline-style: solid;outline-width: 1px;";
   }
 
   function invalidInput(message) {
@@ -68,26 +64,20 @@ window.onload = () => {
     }
   }
 
-  function distributePasswords(event, mobile, widescreen) {
-    mobile.value = event.target.value;
-    widescreen.value = event.target.value;
-    errorMsg();
-  }
-
   function errorMsg() {
-    if (password_mobile.value.length === 0 && password_widescreen.value.length === 0) {
+    if (password[0].value.length === 0) {
       invalidInput("* Please enter a password");
     }
-    else if (password_mobile.value !== confirm_password_mobile.value || password_widescreen.value !== confirm_password_widescreen.value) {
+    else if (password[0].value !== confirm_password[0].value) {
       invalidInput("* Passwords do not match");
     }
     else {
-      for (let prompt of password_match_prompt) {
-        prompt.textContent = "Passwords match";
-        prompt.style.color = 'green';
+      for (let i = 0; i < password_match_prompt.length; i++) {
+        password_match_prompt[i].textContent = "Passwords match";
+        password_match_prompt[i].style.color = 'green';
+        password[i].style.cssText = "outline-color: blue;outline-style: solid;outline-width: 1px;";
+        confirm_password[i].style.cssText = "outline-color: blue;outline-style: solid;outline-width: 1px;";
       }
-      password_mobile.style.cssText = "outline-color: blue;outline-style: solid;outline-width: 1px;";
-      confirm_password_mobile.style.cssText = "outline-color: blue;outline-style: solid;outline-width: 1px;";
     }
   }
 }
