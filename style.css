@@ -111,6 +111,18 @@ label {
   background-image: url('./pexels-sevenstorm-juhaszimrus-439416.jpg');
   background-position: center center;
   background-size: cover;
+  position: relative;
+}
+
+.index-hero-footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 13px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  
+  background-color: #e9e9ed;
 }
 
 .hero {
@@ -358,6 +370,12 @@ label {
     width: 75%;
     height: 75%;
     padding: 1rem;
+  }
+
+  .index-hero-footer {
+    font-size: 15px;
+    padding: 0.2rem;
+    color: black;
   }
 
   .homepage-logo {
